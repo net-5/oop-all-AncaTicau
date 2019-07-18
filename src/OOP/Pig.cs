@@ -6,7 +6,7 @@ namespace OOP
 {
     public class Pig : Mammal
     {
-        public Pig(string name, int maximumSpeed) : base(name, maximumSpeed)
+        public Pig(string name) : base(name)
         {
             MovementTypes.Add(MovementType.Walk);
         }

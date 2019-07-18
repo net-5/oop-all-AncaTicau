@@ -29,18 +29,13 @@ namespace OOP
         protected readonly List<MovementType> MovementTypes = new List<MovementType>();
         protected readonly List<AnimalAttribute> AnimalAttributes = new List<AnimalAttribute>();
 
-        protected Animal(string name, int maximumSpeed)
+        protected Animal(string name)
         {
             this.Name = name;
-            this.MaximumSpeed = maximumSpeed;
         }
 
         public string Name { get; }
 
-        /// <summary>
-        /// km / h
-        /// </summary>
-        public int MaximumSpeed { get; }
 
         public void ShowMovementTypes()
         {
@@ -54,7 +49,7 @@ namespace OOP
                 {
                     result += ", ";
                 }
-              
+
                 result += movementType;
 
                 index++;
@@ -65,7 +60,7 @@ namespace OOP
 
         public void ShowAnimalAttributes()
         {
-            string result = $"The animal {GetNameAndCategory()} has the folowing  attributes : "; 
+            string result = $"The animal {GetNameAndCategory()} has the folowing  attributes : ";
 
             var index = 0;
 
@@ -84,6 +79,26 @@ namespace OOP
             Console.WriteLine(result + ".");
         }
 
+        public void ShowMaximumSpeed()
+        {
+            if (MovementTypes.Contains(MovementType.Walk))
+            {
+                Console.WriteLine($"The animal can {MovementType.Walk} with the maximum speed of 20km/h. ");
+            }
+            else if (MovementTypes.Contains(MovementType.Crawl))
+            {
+                Console.WriteLine($"The animal can {MovementType.Crawl} with the maximum speed of 5km/h. ");
+            }
+            else if (MovementTypes.Contains(MovementType.Fly))
+            {
+                Console.WriteLine($"The animal can {MovementType.Fly} with the maximum speed of 200km/h. ");
+            }
+            else if (MovementTypes.Contains(MovementType.Swim))
+            {
+                Console.WriteLine($"The animal can {MovementType.Swim} with the maximum speed of 10km/h. ");
+            }
+        }
+
         private string GetNameAndCategory()
         {
             return $"{this.GetType().Name} ({this.GetType().BaseType.Name})";
@@ -93,7 +108,7 @@ namespace OOP
         {
             if (MovementTypes.Contains(movementType))
             {
-                Console.WriteLine($"The animal {this.GetType().Name} '{Name}' can {movementType} with the maximum speed {MaximumSpeed}km/h. ");
+                Console.WriteLine($"The animal {this.GetType().Name} '{Name}' can {movementType}. ");
                 return;
             }
 

@@ -6,7 +6,7 @@ namespace OOP
 {
     public class Bee : Animal
     {
-        public Bee(string name, int maximumSpeed) : base(name, maximumSpeed)
+        public Bee(string name) : base(name)
         {
             MovementTypes.Add(MovementType.Fly);
         }

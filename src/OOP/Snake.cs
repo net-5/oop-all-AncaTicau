@@ -6,7 +6,7 @@ namespace OOP
 {
     public class Snake : Reptile
     {
-        public Snake(string name, int maximumSpeed) : base(name, maximumSpeed)
+        public Snake(string name) : base(name)
         {
             MovementTypes.Add(MovementType.Crawl);
         }

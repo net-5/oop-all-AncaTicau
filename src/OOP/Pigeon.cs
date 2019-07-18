@@ -6,7 +6,7 @@ namespace OOP
 {
     public class Pigeon : Bird
     {
-        public Pigeon(string name, int maximumSpeed) : base(name, maximumSpeed)
+        public Pigeon(string name) : base(name)
         {
             MovementTypes.AddRange(new List<MovementType> {MovementType.Walk, MovementType.Fly});
         }

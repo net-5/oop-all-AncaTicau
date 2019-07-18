@@ -6,7 +6,7 @@ namespace OOP
 {
     public class Insect : Animal
     {
-        public Insect(string name, int maximumSpeed) : base(name, maximumSpeed)
+        public Insect(string name) : base(name)
         {
             AnimalAttributes.AddRange(new List<AnimalAttribute> { AnimalAttribute.LaysEggs, AnimalAttribute.IsWarmBlooded, AnimalAttribute.RegulatesBodyTemperature });
         }

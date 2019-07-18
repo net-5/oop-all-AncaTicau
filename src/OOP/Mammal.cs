@@ -6,7 +6,7 @@ namespace OOP
 {
     public abstract class Mammal : Animal
     {
-        protected Mammal(string name, int maximumSpeed) : base(name, maximumSpeed)
+        protected Mammal(string name) : base(name)
         {
             AnimalAttributes.AddRange(new List<AnimalAttribute>{AnimalAttribute.GivesBirth, AnimalAttribute.IsWarmBlooded, AnimalAttribute.RegulatesBodyTemperature});
         }

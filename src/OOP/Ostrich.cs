@@ -6,7 +6,7 @@ namespace OOP
 {
     public class Ostrich : Bird
     {
-        public Ostrich(string name, int maximumSpeed) : base(name, maximumSpeed)
+        public Ostrich(string name) : base(name)
         {
             MovementTypes.Add(MovementType.Walk);
         }

@@ -6,7 +6,7 @@ namespace OOP
 {
     public class Platypus : Mammal
     {
-        public Platypus(string name, int maximumSpeed) : base(name, maximumSpeed)
+        public Platypus(string name) : base(name)
         {
             MovementTypes.AddRange(new List<MovementType> { MovementType.Walk, MovementType.Swim });
         }
