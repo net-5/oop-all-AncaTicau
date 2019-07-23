@@ -8,7 +8,6 @@ namespace OOP
     {
         protected Mammal(string name) : base(name)
         {
-            AnimalAttributes.AddRange(new List<AnimalAttribute>{AnimalAttribute.GivesBirth, AnimalAttribute.IsWarmBlooded, AnimalAttribute.RegulatesBodyTemperature});
         }
     }
 }

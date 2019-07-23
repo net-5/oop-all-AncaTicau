@@ -8,7 +8,6 @@ namespace OOP
     {
         public Reptile(string name) : base(name)
         {
-            AnimalAttributes.AddRange(new List<AnimalAttribute> { AnimalAttribute.IsColdBlooded, AnimalAttribute.LaysEggs });
         }
     }
 }

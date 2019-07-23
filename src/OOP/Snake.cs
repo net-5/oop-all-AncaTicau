@@ -4,11 +4,17 @@ using System.Text;
 
 namespace OOP
 {
-    public class Snake : Reptile
+    public class Snake : Reptile, ICrawl
     {
-        public Snake(string name) : base(name)
+        private int _maximumSpeedCrawl;
+
+        public Snake(string name, int maximumSpeedCrawl) : base(name)
         {
-            MovementTypes.Add(MovementType.Crawl);
+            this._maximumSpeedCrawl = maximumSpeedCrawl;
+        }
+        public void Crawl()
+        {
+            Console.WriteLine($"The animal {GetNameAndCategory()} crawls with the maximum speed of {_maximumSpeedCrawl}km/h.");
         }
     }
 }

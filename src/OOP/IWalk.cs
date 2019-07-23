@@ -4,10 +4,8 @@ using System.Text;
 
 namespace OOP
 {
-    public class Insect : Animal
+    public interface IWalk
     {
-        public Insect(string name) : base(name)
-        {
-        }
+        void Walk();
     }
 }

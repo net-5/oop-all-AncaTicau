@@ -4,11 +4,18 @@ using System.Text;
 
 namespace OOP
 {
-    public class Pig : Mammal
+    public class Pig : Mammal, IWalk
     {
-        public Pig(string name) : base(name)
+        private int _maximumSpeedWalk;
+
+        public Pig(string name, int maximumSpeedWalk) : base(name)
         {
-            MovementTypes.Add(MovementType.Walk);
+            this._maximumSpeedWalk = maximumSpeedWalk;
+        }
+
+        public void Walk()
+        {
+            Console.WriteLine($"The animal {GetNameAndCategory()} walks with the maximum speed of {_maximumSpeedWalk}km/h.");
         }
     }
 }

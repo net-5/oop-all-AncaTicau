@@ -8,7 +8,6 @@ namespace OOP
     {
         public Bird(string name) : base(name)
         {
-            AnimalAttributes.AddRange(new List<AnimalAttribute> { AnimalAttribute.HasFeathers, AnimalAttribute.IsWarmBlooded, AnimalAttribute.RegulatesBodyTemperature });
         }
     }
 }

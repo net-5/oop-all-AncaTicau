@@ -4,8 +4,8 @@ using System.Text;
 
 namespace OOP
 {
-    public interface IMove
+    public interface ISwim
     {
-        void Move(MovementType movementType);
+        void Swim();
     }
 }
